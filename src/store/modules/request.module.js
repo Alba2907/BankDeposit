@@ -15,6 +15,7 @@ export default {
     state() {
         return {
             requests: []
+
         }
     },
     mutations: {
@@ -41,6 +42,7 @@ export default {
                     value: 'Заявка успешно создана',
                     type: 'primary'
                 }, {root: true})
+
             } catch (e) {
                 dispatch('setMessage', {
                     value: e.message,

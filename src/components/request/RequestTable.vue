@@ -1,4 +1,5 @@
 <template>
+
 <h4 v-if="requests.length === 0" class="text-center">Заявок пока нет</h4>
   <table v-else class="table">
     <thead>
@@ -23,6 +24,7 @@
 <!--         делаем кастомную ссылку, чтобы открывать заявки при нажатии-->
         <router-link v-slot="{navigate}" custom :to="{name: 'Request', params: {id: request.id}}">
         <button class="btn " @click="navigate">Открыть</button>
+
         </router-link>
       </td>
     </tr>
@@ -37,7 +39,8 @@
 <script>
 import {currency} from "@/utils/currency";
 import AppStatus from "@/components/ui/AppStatus";
-import {useRoute} from "vue-router";
+
+
 
 
 export default {
@@ -46,8 +49,12 @@ export default {
   // импортим функции из файла каренси джс, чтобы использовать здесь
   setup() {
 
+
+
     return {currency}
+
   }
+
 }
 </script>
 

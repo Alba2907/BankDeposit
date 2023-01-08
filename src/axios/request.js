@@ -10,6 +10,7 @@ const requestAxios = axios.create({
     baseURL: process.env.VUE_APP_FB_URL
     })
 
+
 // делаем для мониторинга устаревания токена
 requestAxios.interceptors.response.use( null,  error => {
    //  ошибка логина
