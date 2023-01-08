@@ -1,5 +1,6 @@
 <template>
 <div class="filter">
+  <h7>Фильтры</h7>
   <div class="form-control">
     <input type="text" placeholder="Введите имя" v-model="name">
   </div>
